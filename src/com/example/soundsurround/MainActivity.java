@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -33,6 +34,10 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				ServerCreator c = new ServerCreator();
+		        TextView message = (TextView) findViewById(R.id.textViewMessageReceived);
+				while (true) {
+					message.setText(c.listen());
+				}
 			}
 		});
         
