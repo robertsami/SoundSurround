@@ -30,11 +30,14 @@
         android:layout_alignLeft="@+id/button1"
         android:layout_centerVertical="true"
         android:text="Server (da b@w$)" />
-    
+
     <TextView
         android:id="@+id/textViewMessageReceived"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="31dp"
         android:text="I have no friends yet :(" />
 
 </RelativeLayout>

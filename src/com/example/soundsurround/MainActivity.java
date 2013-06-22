@@ -1,6 +1,7 @@
 package com.example.soundsurround;
 
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;
@@ -14,6 +15,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+
+        StrictMode.setThreadPolicy(policy); 
         
         Button clientButton = (Button) findViewById(R.id.button1);
         
@@ -35,9 +40,7 @@ public class MainActivity extends Activity {
 			public void onClick(View v) {
 				ServerCreator c = new ServerCreator();
 		        TextView message = (TextView) findViewById(R.id.textViewMessageReceived);
-				while (true) {
-					message.setText(c.listen());
-				}
+				message.setText(c.listen());
 			}
 		});
         
