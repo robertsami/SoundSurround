@@ -17,7 +17,7 @@ public class ServerCreator {
 	public ServerCreator() {
 		
         try {
-            serverSocket = new ServerSocket(0,0,InetAddress.getByName("192.168.1.8"));  //Server socket
+            serverSocket = new ServerSocket(0,0,InetAddress.getByName("192.168.1.15"));  //Server socket
  
         } catch (IOException e) {
             System.out.println("Could not listen on port: 4444");

@@ -37,7 +37,7 @@ public class ClientActivity extends Activity {
 
 				try {
 
-					client = new Socket("192.168.1.8", 4444);  //connect to server
+					client = new Socket("192.168.1.15", 4444);  //connect to server
 					printwriter = new PrintWriter(client.getOutputStream(),true);
 					printwriter.write(messsage);  //write the message to output stream
 
