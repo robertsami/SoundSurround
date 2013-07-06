@@ -8,11 +8,18 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 public class ServerCreator {
-
+	
     private ServerSocket serverSocket;
     private Socket clientSocket;
     private InputStreamReader inputStreamReader;
     private BufferedReader bufferedReader;
+    
+	public static void main(String[] args) {
+		ServerCreator sc = new ServerCreator();
+		while (true) {
+			System.out.println(sc.listen());
+		}
+	}
     
 	public ServerCreator() {
 		
