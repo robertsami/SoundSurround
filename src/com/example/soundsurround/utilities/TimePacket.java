@@ -1,7 +1,5 @@
 package com.example.soundsurround.utilities;
 
-import com.example.soundsurround.constants.*;
-
 public class TimePacket {
 	private int protocol;
 	private long timeMillis; // time since 1/1/1970
@@ -23,5 +21,6 @@ public class TimePacket {
 	}
 	
 	public long getTimeMillis() { return timeMillis; }
+	public int getProtocol() { return protocol; }
 	
 }
